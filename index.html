@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		function timeUpdate(){
+
+		var d = new Date();
+		var hours = d.getHours();
+		var minutes = d.getMinutes();
+		var value;
+
+		if (hours < 5){
+			document.body.style.backgroundColor = "black";
+			$('#colors1').css({'background-color': 'black', 'color': 'white'});
+		} else if (hours < 9 && hours > 4) {
+			document.body.style.backgroundColor = "yellow";
+			$('#colors2').css({'background-color': 'yellow', 'color': 'white'});
+		} else if (hours < 13 && hours > 8) {
+			document.body.style.backgroundColor = "orange";
+			$('#colors3').css({'background-color': 'orange', 'color': 'white'});
+		} else if (hours < 17 && hours > 12) {
+			document.body.style.backgroundColor = "blue";
+			$('#colors4').css({'background-color': 'blue', 'color': 'white'});
+		} else if (hours < 21 && hours > 16) {
+			document.body.style.backgroundColor = "green";
+			$('#colors5').css({'background-color': 'green', 'color': 'white'});
+		} else if (hours > 20) {
+			document.body.style.backgroundColor = "red";
+			$('#colors6').css({'background-color': 'red', 'color': 'white'});
+		} 
+
+		if (hours == 13){
+			hours = 1;
+		} else if (hours == 14){
+			hours = 2;
+		} else if (hours == 15){
+			hours = 3;
+		} else if (hours == 16){
+			hours = 4;
+		} else if (hours == 17){
+			hours = 5;
+		} else if (hours == 18){
+			hours = 6;
+		} else if (hours == 19){
+			hours = 7;
+		} else if (hours == 20){
+			hours = 8;
+		} else if (hours == 21){
+			hours = 9;
+		} else if (hours == 22){
+			hours = 10;
+		} else if (hours == 23){
+			hours = 11;
+		} else if (hours == 24){
+			hours = 12;
+		} 
+
+		if (minutes < 10){
+			$('.time').html("<p>" + hours + ":" + "0" + minutes + "</p>");
+		} else {
+		$('.time').html("<p>" + hours + ":" + minutes + "</p>");
+		}
+		setTimeout(timeUpdate, 1000);
+	}
+	timeUpdate();
+	});
+
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="heading">
+		<h1>Time of Day Background Generator</h1>
+		<p>Watch as your current time of day is displayed below, and the background color of the page is set based on the time!</p>
+	</div>
+	<div class="time">
+	</div>
+	<div class="colors">
+		<p id="colors1">1AM - 4AM</p>
+		<p id="colors2">5AM - 8AM</p>
+		<p id="colors3">9AM - 12PM</p>
+		<p id="colors4">1PM - 4PM</p>
+		<p id="colors5">5PM - 8PM</p>
+		<p id="colors6">9PM - 12AM</p>
+	</div>
+</body>
+</html>
+

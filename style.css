@@ -1,0 +1,32 @@
+.time {
+	text-align: center;
+	color: white;
+	font-size: 60px;
+	font-family: 'Lato';
+	padding-top: 35px;
+}
+
+.heading {
+	text-align: center;
+	color: white;
+	padding-top: 40px;
+	font-family: 'Lato';
+}
+
+.colors p {
+	font-family: 'Lato';
+	width: 14%;
+	float: left;
+	color: black;
+	border: 2px solid;
+	border-color: white;
+	border-radius: 200px;
+	text-align: center;
+	padding: 5% 0;
+	margin: 0 1%;
+	background-color: white;
+}
+
+.colors {
+	padding-top: 10%;
+}
